@@ -7,6 +7,8 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    internal var score = 0
+
     internal lateinit var tapMeButton: Button
     internal lateinit var gameScoreTextView: TextView
     internal lateinit var timeLeftTextView: TextView
@@ -17,5 +19,18 @@ class MainActivity : AppCompatActivity() {
         tapMeButton = findViewById(R.id.tapMeButton)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
         timeLeftTextView = findViewById(R.id.timeLifeTextView)
+
+        tapMeButton.setOnClickListener {view ->
+            incrementScore()
+        }
+
+        gameScoreTextView.text = getString(R.string.yourScore, score)
+
+    }
+
+    private fun incrementScore() {
+        score += 1
+        val newScore = getString(R.string.yourScore, score)
+        gameScoreTextView.text = newScore
     }
 }
