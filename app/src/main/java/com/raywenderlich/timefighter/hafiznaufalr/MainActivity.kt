@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         countDownTimer = object :CountDownTimer(initialCountDown, countDownInterval){
             override fun onTick(millisUntilFinished: Long) {
+                timeLeftOnTimer = millisUntilFinished
                 val timeLeft = millisUntilFinished / 1000
                 timeLeftTextView.text = getString(R.string.timeLeft, timeLeft)
             }
