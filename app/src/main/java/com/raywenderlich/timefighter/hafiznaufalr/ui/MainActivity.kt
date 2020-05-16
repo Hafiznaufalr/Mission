@@ -1,4 +1,4 @@
-package com.raywenderlich.timefighter.hafiznaufalr
+package com.raywenderlich.timefighter.hafiznaufalr.ui
 
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -6,14 +6,16 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.raywenderlich.timefighter.hafiznaufalr.BuildConfig
+import com.raywenderlich.timefighter.hafiznaufalr.R
 
 class MainActivity : AppCompatActivity() {
-    internal lateinit var tapMeButton: Button
+    internal lateinit var tapMeButton: ExtendedFloatingActionButton
     internal lateinit var gameScoreTextView: TextView
     internal lateinit var timeLeftTextView: TextView
 
